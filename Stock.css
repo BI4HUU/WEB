@@ -1,0 +1,22 @@
+.Stock {
+	background-color: #999;
+	display: flex;
+
+
+	justify-content: center;
+	height: 400px;
+	width: 100%;
+}
+.Stock_1 {
+font-size: 40px;
+color: #888;
+
+align-self:   center;
+
+}
+
+.Stock_2 {
+font-size: 48px;
+color: #c88;
+align-self:   center;
+}

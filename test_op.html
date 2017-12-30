@@ -1,0 +1,19 @@
+<div id="fonModal" onclick="fMClose()" >123</div>
+<style type="text/css">
+	#fonModal{
+		opacity: 0.1;
+		transition: opacity 2s;
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: rgba(0, 0, 0, 0.6);}
+</style>
+
+<script>	
+	var fM = document.getElementById('fonModal');
+	function fMOpen() {
+		fM.style.opacity = '1';
+	};
+</script>

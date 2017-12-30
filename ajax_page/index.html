@@ -1,0 +1,42 @@
+
+<script src="jquery-3.1.1.js"></script>
+	<meta charset="UTF-8">
+	
+			
+		$("#Sidebar").bind("click", function () {
+			if (void 0 === $('.b_sidebar').attr('style')) {
+				$('.b_header').css('display','none');
+				$('.b_footer').css('display','none');
+				var prov = document.getElementsByClassName("b_sidebar");
+				if (prov.length == 0) {	_ajax ("2");};
+			} else {
+				$('.b_header').css('display','none');
+				$('.b_footer').css('display','none');
+				$('.b_sidebar').removeAttr('style');
+			}
+		});	
+		$("#footer").bind("click", function () {
+			if (void 0 === $('.b_footer').attr('style')) {
+				$('.b_sidebar').css('display','none');
+				$('.b_header').css('display','none');
+				var prov = document.getElementsByClassName("b_footer");
+				if (prov.length == 0) {	_ajax ("3");};
+			} else {
+				$('.b_sidebar').css('display','none');
+				$('.b_header').css('display','none');
+				$('.b_footer').removeAttr('style');
+			}
+		});	
+		function _ajax ($_data) {
+			$.ajax ({
+				url: "server.php",
+				type: "POST",
+				data: ({name: $_data}),
+				dataType: "html",
+				success:  function (data) {$("#content").append(data);
+				}
+			});
+		};
+	</script>
+</body >
+</html>

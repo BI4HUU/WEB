@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="" rel="stylesheet" type="text/css"> //підключаємо стилі
+		<script src="script.js"></script> //підключаємо .js
+		<meta charset="utf-8">   // вказуємо кодіровку (рус,укр)
+		<link href="CSS.css" rel="shortcut icon" type="image/x-icon"/>  картинка в title
+		<title>Назва_сайта</title>
+	</head>
+	<body>//тєло сайта
+		<H1></H1> (1-6)            // заголовок
+		<a href="адрес">Назва_ссилки</a>  // ссилка текстова
+		<IMG SRC="адрес_картинки"></a> //ссилка - картинка
+		<IMG SRC="адрес_картинки">  //Картинка
+		<H1></H1> (1-6)            // Заголовок (Збільшений текст)
+		<UL>         //маркирований список.
+			<LI></LI>      //строка маркированного списка.
+		</UL>
+		<OL>         //нумерований список.
+			<LI></LI>   //строка нумерованного списка.
+		</OL>
+	</body>
+</html>
+Строчные — <span>, <em>, <strong>
+Блочные — <div>, <p>, <article>
+Строчно-блочные — <input>, <textarea>
+<header>  <!-- шапка -->
+<nav>    <!-- навігація, меню -->
+<section> <!-- основа сайта -->
+<aside>   <!-- додаткова основа сайта -->
+<main>   <!-- основна інформація -->
+<footer> <!-- подвал -->
+
+<center>  <!-- центрує -->
+
+-------------------
+<!-- PUG -->
+include nameFile // підулючить html
+extends nameFile // підулючить css
+mixin nameMixin(data, data2)
+	div(class= 'classes '+data)= data2
++nameMixin('classes2', 'text')   // <div class="classes classes2">text</div>
+---------------
+a{
+display:inline-block;
+}
+.block{
+width:200px;
+height:100px;
+background:#000000;
+}

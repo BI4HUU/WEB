@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="block1">
+		<p>red: 
+			<input type="range" id="rtl" min="0" max="256" value="0">
+		</p>
+		<p>green: 
+			<input type="range" id="rtr" min="0" max="256" value="0">
+		</p>
+		<p>blue: 
+			<input type="range" id="rbr" min="0" max="256" value="0">
+		</p>
+		<p>прозрачность: 
+			<input type="range" id="rbr1" min="0" max="100" value="80">
+		</p>
+<br>
+	</div>
+	<div class="block1">
+		<p>верх-левий: 
+			<input type="range" id="rtl2" min="0" max="256" value="0">
+		</p>
+		<p>верх-правый: 
+			<input type="range" id="rtr2" min="0" max="256" value="0">
+		</p>
+		<p>низ-правый: 
+			<input type="range" id="rbr2" min="0" max="256" value="0">
+		</p>
+		<p>низ-левий: 
+			<input type="range" id="rbl2" min="0" max="256" value="0">
+		</p>
+	</div>
+	<div class="block2" id="block"></div>
+</body>
+</html>
+<style type="text/css">
+	#block {	width: 512px;	height: 512px;	}
+</style>
+
+<script type="text/javascript">
+
+function fun1() {
+		var rtl = document.getElementById('rtl');
+		var rtr = document.getElementById('rtr');
+		var rbr = document.getElementById('rbr');
+		var rtl2 = document.getElementById('rtl2');
+		var rtr2 = document.getElementById('rtr2');
+		var rbr2 = document.getElementById('rbr2');
+		var rbl2 = document.getElementById('rbl2');
+		var block = document.getElementById('block');
+		var opacity = rbr1.value/100;
+		var sss = document.getElementById('_2');
+
+		block.style.borderRadius = rtl2.value+"px "+rtr2.value+"px "+rbr2.value+"px "+rbl2.value+"px ";
+	  	block.style.backgroundColor = "rgb("+rtl.value+", "+rtr.value+", "+rbr.value+")";
+	  	block.style.opacity= opacity ;
+};
+setInterval(function(){
+	fun1()
+}, 500);
+	
+</script>

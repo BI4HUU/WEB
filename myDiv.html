@@ -1,0 +1,16 @@
+<div class="myDiv" onclick="f()"></div>
+<style type="text/css">.myDiv{
+	height: 600px;
+	width: 600px;
+	background: #ddd;
+	}</style>
+<script type="text/javascript">
+	function f() {
+		console.log(`${event.clientX} ${event.clientY}`)
+	}
+	// var div = document.getElementById('myDiv');
+	// EventUtil.addHandler(div, "click", function (event) {
+	// 	event = EventUtil.getEvent(event);
+		
+	// });
+</script>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+	<body>
+	<ul>
+		<li id="Header" onclick="Header()">Text_Header</li>
+		<li id="Sidebar" onclick="Sidebar()">Text_Sidebar</li>
+		<li id="Footer" onclick="Footer()">Text_Footer</li>
+		<li id="content"></li>
+	</ul>
+	<div class='b_header' id="b_header" style="display: none;">HEADER</div>
+	<div class='b_sidebar' id="b_sidebar" style="display: none;">SIDEBAR</div>
+	<div class='b_footer' id="b_footer" style="display: none;">FOOTER</div>
+	<style>div{height: 300px;width: 400px; background: #999;color: #933;font-size: 88px;}</style>
+<script>
+	var b_h = document.getElementById("b_header");
+	var b_s = document.getElementById("b_sidebar");
+	var b_f = document.getElementById("b_footer");
+	var h = document.getElementById('Header');
+	var s = document.getElementById('Sidebar');
+	var f = document.getElementById('Footer');
+
+	function Header() {
+		if (!b_h) {
+			alert('888888888888888888');
+			b_s.style.display = "none";
+			b_f.style.display = "none";
+		} else {
+			b_s.style.display = "none";
+			b_f.style.display = "none";
+			b_h.style.display = "block";
+		};
+	};
+	function Sidebar() {
+		if (!b_s) {
+			alert('888888888888888888');
+			b_h.style.display = "none";
+			b_f.style.display = "none";
+		} else {
+			b_h.style.display = "none";
+			b_f.style.display = "none";
+			b_s.style.display = "block";
+		};
+	};
+	function Footer() {
+		if (!b_f) {
+			alert('888888888888888888');
+			b_s.style.display = "none";
+			b_h.style.display = "none";
+		} else {
+			b_s.style.display = "none";
+			b_h.style.display = "none";
+			b_f.style.display = "block";
+		};
+	};
+
+</script>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+ 	<div id="buttonModal" onclick="fMOpen()">MODAL
+		<div id="fonModal" style="display: none;" onclick="fMClose()" ></div>
+		<div id="Modal" style="display: none;"></div>
+	</div>
+</body>
+<style type="text/css">
+	#buttonModal{
+		position: relative;
+		height: 80px;
+		width: 100px;
+		background-color: #987;
+		margin: 80px auto;}
+	#fonModal{
+		display: flex;	
+		justify-content: center;
+		opacity: 0.1;
+		transition: opacity .5s;
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: rgba(0, 0, 0, 0.6);
+		z-index: 99998;}
+	#Modal{	
+		align-self: center; 
+		opacity: 0.1;
+		transition: all .5s;
+		transform: scale(0.2);/*
+		position: absolute;*/
+		margin: 130px;
+		height: 280px;
+		width: 400px;
+		padding: 20px;
+		background-color: rgba(222, 222, 222, 1);
+		z-index: 99999;}		
+</style>
+<script>
+	var bM = document.getElementById('buttonModal');
+	var fM = document.getElementById('fonModal');
+	var mW = document.getElementById('Modal');
+	function fMOpen() {
+		fM.style.display = 'flex';
+		mW.style.display = 'flex';
+		setTimeout(() => { 
+			fM.style.opacity = '1';
+			mW.style.opacity = '1';
+			mW.style.transform = 'scale(1)';},18);
+	};
+function fMClose() {
+		setTimeout(() => { 
+			fM.style.opacity = '.1';
+			mW.style.opacity = '.1';
+			mW.style.transform = 'scale(0.2)';
+		},40);
+		setTimeout(() => { 
+			fM.style.display = 'none';
+			mW.style.display = 'none';
+		},540);
+	}	
+</script>
+</html>

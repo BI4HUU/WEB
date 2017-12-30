@@ -1,0 +1,11 @@
+var db = 1;
+var SI = setInterval(function func() {
+	console.log(db++);
+}, 3000);
+function f2() {
+	clearTimeout(SI);
+	db = 1;
+	SI = setInterval(function func() {
+		console.log(db++);
+	}, 3000);
+}

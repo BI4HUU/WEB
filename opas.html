@@ -1,0 +1,29 @@
+<div id="fonModal" onclick="fMOpen()" >123</div>
+<div id="fonModal2" onclick="fMClose()" >123</div>
+<style type="text/css">
+	#fonModal{
+		opacity: 0.2;
+		transition: background 2s;
+		position: fixed;
+		top: 80;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: rgba(0, 0, 0, 0.1);}	
+	#fonModal2{
+		height: 80px;
+		width: 80px;
+		background-color: red;}
+</style>
+
+<script>	
+	var fM = document.getElementById('fonModal');
+	function fMOpen() {
+		fM.style.background = 'rgba(222, 0, 0, 0.9)';};
+function fMClose() {
+		fM.style.transition = 'background 2s';
+		fM.style.background = 'rgba(0, 222, 0, 0.8)';
+	
+	};
+
+</script>
