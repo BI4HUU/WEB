@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("FontAwesome.ttf"); }
+
+.testbody {
+  color: var(--color, #999999); }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
