@@ -41,7 +41,7 @@ white-space: nowrap; /* непереноситься*/
 
 position: fixed; /* Фиксированное положение */
 box-sizing: border-box;  /*поля внутри блока */
-
+pointer-events: none; /* неклікабельний блок */
 flexbox {
 	.konteiner {
 		 display: flex;
