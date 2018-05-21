@@ -37,6 +37,7 @@ left - /*ліво*/
 opacity: 0.3; /* Прозрачность*/
 transform: scale(2); /* Розмір*/
 transition: all 1s; /* Плавний переход*/
+transform-origin center
 white-space: nowrap; /* непереноситься*/
 
 position: fixed; /* Фиксированное положение */
